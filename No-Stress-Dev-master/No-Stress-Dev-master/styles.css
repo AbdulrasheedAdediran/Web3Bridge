@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.logo {
+  width: 150px;
+}
+.logo img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar styling */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 5%;
+  font-family: "Bellefair", serif;
+  font-weight: 700;
+  background: hsl(0, 0%, 100%, 0.75);
+  box-shadow: 2px -2px 6px 6px rgba(0, 0, 0, 0.5);
+}
+.light-mode nav {
+  background: radial-gradient(circle farthest-side, #000, #fff);
+}
+nav h4 {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
+}
+.light-mode nav h4 {
+  color: #fff;
+}
+.switch {
+  position: relative;
+  display: flex;
+  width: 3.5rem;
+  height: 1.75rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #df1212;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.2rem;
+  bottom: 0.25rem;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+input:checked + .slider {
+  background: #000;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.75rem);
+  -ms-transform: translateX(1.75rem);
+  transform: translateX(1.75rem);
+  background-color: #fff;
+}
+.slider.round {
+  border-radius: 2rem;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.light-mode section {
+  background: hsl(0, 0%, 50%, 0.5);
+  color: #000;
+}
+
+/* Other sections of the webpage */
+section {
+  height: 100%;
+  background: radial-gradient(circle farthest-side, #df1212, #000);
+}
+
+.content {
+  width: 70%;
+  padding-top: 1.5rem;
+  margin: auto;
+}
+
+/* This is the input value */
+.content input {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+::placeholder {
+  color: hsl(0, 0%, 100%, 0.75);
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.light-mode ::placeholder {
+  color: hsl(0, 0%, 0%, 0.75);
+}
+:hover::placeholder {
+  color: #fff;
+}
+input:hover {
+  background: rgba(255, 45, 45, 0.5);
+}
+.light-mode input:hover {
+  background: hsl(0, 0%, 0%, 0.25);
+}
+.content input:focus {
+  border: 1px solid #fff;
+  background: hsl(0, 0%, 100%, 0.15);
+  color: #fff;
+  font-weight: 700;
+}
+.light-mode .content input:focus {
+  background: hsl(0, 0%, 0%, 0.25);
+  color: #000;
+}
+.light-mode input {
+  border: 2px solid #000;
+  color: #000;
+}
+.input-container {
+  position: relative;
+}
+.light-mode {
+  transition: 0.5s ease-in-out;
+}
+.input-container .fa-plus {
+  position: absolute;
+  color: hsl(0, 0%, 100%, 0.75);
+  right: 2rem;
+  top: 30%;
+  cursor: pointer;
+}
+.fa-plus:hover {
+  color: #fff;
+}
+.light-mode .fa-plus {
+  color: #000;
+}
+
+/* This section holds the list of inputs. */
+
+.todoList {
+  color: #fff;
+  margin: 2.5rem 0;
+}
+.todoList li {
+  background: hsl(0, 0%, 100%, 0.15);
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+@supports (backdrop-filter: blur(25px)) {
+  .todoList li {
+    background: hsl(0, 0%, 100%, 0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+}
+
+.light-mode .todoList li {
+  background: hsl(0, 0%, 0%, 0.75);
+}
+.fa-trash-alt {
+  cursor: pointer;
+}
+
+/* Button */
+
+.btn-section {
+  width: 100%;
+  margin: auto;
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  margin: auto;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px - 23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px - 36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px - 79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.light-mode .btn {
+  background: hsl(0, 0%, 0%, 0.75);
+  color: #fff;
+}
+.btn:hover {
+  background: hsl(0, 0%, 10%, 0.95);
+  color: #fff;
+}
+.light-mode .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*end of change theme*/
+
+.table--wrapper {
+  display: grid;
+  color: #fff;
+  padding: 5%;
+  margin: auto;
+  width: 100%;
+}
+.table-container {
+  margin: 0;
+  height: 100%;
+}
+.table--heading,
+.light-mode .table--heading {
+  background: hsl(0, 0%, 0%, 0.75);
+  color: #fff;
+  box-shadow: 0px 4px 6px 6px rgba(0, 0, 0, 0.5);
+}
+article {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+
+  padding: 0.75rem 2%;
+}
+article:not(:first-child) {
+  box-shadow: 2px -2px 6px 6px rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+}
+.light-mode article {
+  background: hsl(0, 0%, 100%, 0.15);
+}
+.table--heading p {
+  text-align: center;
+}
+.table--heading p:nth-child(3) {
+  text-align: left;
+}
+article p {
+  margin: auto;
+  text-align: left;
+  width: min(10rem, 10vw);
+}
+article p:not(:nth-child(3)) {
+  text-align: center;
+}
+article p:nth-child(1) {
+  width: 5%;
+}
+article p:nth-child(2) {
+  width: 25%;
+}
+article p:nth-child(3) {
+  width: 50%;
+}
+article p:nth-child(4) {
+  width: 15%;
+}
+
+/* table
+table {
+  margin-right: auto;
+  margin-left: auto;
+  border-collapse: collapse;
+  width: 50%;
+  border: solid 0.05rem black;
+  background: rgb(255, 138, 138, 0.3);
+}
+td {
+  padding: 2rem;
+  text-align: center;
+}
+th,
+td {
+  border-right: solid 0.1rem black;
+  /* border-left: solid 0.1rem black; 
+}
+
+input[type="checkbox"] ~ .replace {
+  color: #df1212;
+}
+.contain {
+  place-content: center;
+} */
+
+/* Media Queries for the responsiveness */
+@media (max-width: 480px) {
+  .logo {
+    width: 90px;
+  }
+
+  .app-name span {
+    display: block;
+    text-align: center;
+  }
+}
