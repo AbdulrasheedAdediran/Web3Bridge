@@ -2,66 +2,72 @@
 
 pragma solidity 0.8.10;
 
+
 contract W3BDevs{
-  struct CohortSixDev{
+
+    
+  struct Cohort{
         string name;
-        string stack;
-        uint experience;
-        BioData devBioData;
+        address[] devs;
+        mapping(address => Dev) DevDetails;
     }
-    struct BioData{
+    struct Dev{
+        string name;
         uint age;
-        uint phoneNumber;
-        string gender;
-        string stateOfOrigin;
-        mapping(address => uint) regNum;
-    }
-    struct BioDataWithoutMapping{
-        uint age;
-        uint phoneNumber;
-        string gender;
-        string stateOfOrigin;
-    }
-    struct CohortSixDevComplex{
-       string name;
-        string stack;
         uint experience;
-        BioDataWithoutMapping bdwm;
+        string gender;
+        string stack;
     }
-        
-    mapping(string => CohortSixDev) devNames;
-    uint regNum;
+
+    struct CohortWithoutMapping{
+        string name;
+        address[] devs;
+    }
+ 
+    mapping(uint => Cohort) CohortId;
     uint index = 1;
 
-    function addDev(
-        string memory _name, 
-        string memory _stack, 
-        uint _exp, uint _age, uint _phoneNumber,
-        string memory _gender,
-        string memory _so, address _address) public {
-        CohortSixDev storage csd = devNames[_name];
-        csd.name = _name;
-        csd.stack = _stack;
-        csd.experience = _exp;
-        csd.devBioData.age = _age;
-        csd.devBioData.phoneNumber = _phoneNumber;
-        csd.devBioData.gender = _gender;
-        csd.devBioData.stateOfOrigin = _so;
-        csd.devBioData.regNum[_address] = regNum;
+   
+    function addCohort(string memory _name) public {
+        Cohort storage c = CohortId[index];
+        c.name = _name;
         index++;
     }
 
-   
-    function getDevs(string memory _name) view public returns(CohortSixDevComplex memory cc){
-       
-        CohortSixDev storage csd = devNames[_name];
-        cc.name = csd.name;
-        cc.stack = csd.stack;
-        cc.experience = csd.experience;
-        cc.bdwm.age = csd.devBioData.age;
-        cc.bdwm.phoneNumber = csd.devBioData.phoneNumber;
-        cc.bdwm.gender = csd.devBioData.gender;
-        cc.bdwm.stateOfOrigin = csd.devBioData.stateOfOrigin;
+    function addDev(string memory _name, 
+    uint _age, uint _exp, 
+    string memory _gender, 
+    string memory _stack, uint _cohortIndex) public {
+        Cohort storage c = CohortId[_cohortIndex];
+        c.devs.push(msg.sender);
+        c.DevDetails[msg.sender].name = _name;
+        c.DevDetails[msg.sender].age = _age;
+        c.DevDetails[msg.sender].experience = _exp;
+        c.DevDetails[msg.sender].gender = _gender;
+        c.DevDetails[msg.sender].stack = _stack;
     }
 
+    function getDevsInfo(uint cohortIndex) view public returns(Dev[] memory d){
+       Cohort storage c = CohortId[cohortIndex];
+       d = new Dev[](c.devs.length);
+       for(uint i = 0; i < c.devs.length; i++){
+           d[i] = c.DevDetails[c.devs[i]];
+       }
+       
+    }
+
+    function getAllCohorts() view public returns(CohortWithoutMapping[] memory allCohorts){
+        allCohorts = new CohortWithoutMapping[](index);
+        for(uint i = 0; i < index; i++){
+            allCohorts[i].name = CohortId[i+1].name;
+            allCohorts[i].devs = CohortId[i+1].devs;
+        }
+    }
+
+    
+
+ 
+
 }
+
+
