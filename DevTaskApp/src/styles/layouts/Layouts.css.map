@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ;CACnB;;AACD,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,iBAAiB;EACxB,IAAI,EAAE,IAAI;EACV,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,ECJT,OAAO;EDKd,UAAU,EAAC,KAAK;CACjB",
+    "sources": [
+        "Layouts.scss",
+        "../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "Layouts.css"
+}

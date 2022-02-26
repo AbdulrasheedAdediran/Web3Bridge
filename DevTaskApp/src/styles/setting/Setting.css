@@ -1,0 +1,25 @@
+.flex_setting {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 80px;
+  padding: 2em;
+}
+
+.flex_setting .Setting_card {
+  border: 3px dashed #000000;
+  border-radius: 18.4302px;
+  cursor: pointer;
+}
+
+.flex_setting .single_setting {
+  padding: 2rem;
+  width: 280px;
+  text-align: center;
+  margin: auto;
+}
+/*# sourceMappingURL=Setting.css.map */

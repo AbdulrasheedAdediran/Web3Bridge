@@ -1,0 +1,157 @@
+@import "../variables/Variables.scss";
+.table{
+    padding:2rem;
+}
+.admin{
+    margin-bottom:2rem;
+}
+.task__status{
+    color:#116530;
+    font-weight: 500;
+}
+
+.task__danger{
+    color:#DA1212;
+}
+.task__priority{
+color: #969696
+;
+}
+
+.task__deadline{
+    color:#DA1212;
+}
+.user__lr {
+    font-size: 1.85rem;
+    color: #6a6868;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+.task__btn{
+    width:60% !important;
+    cursor: pointer !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.35rem;
+    border-radius:10px
+
+}
+.task__modal--details{
+    color: #000;
+    background-color: #11468F;
+    opacity: .6;
+}
+.form_flex{
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 100%;
+    border-radius: 10px;
+}
+.btn{
+    background-color:blue;
+    transform: translateY(-1.5rem);
+    // opacity: 1;
+    cursor: pointer;
+    margin-left:1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.item__1{
+    width: 100%;
+    padding: 1rem;
+}
+.item__2{
+    width: 30%;
+    margin-right: 2rem;
+}
+
+
+
+.Task__container {
+  padding: 0.3rem 3rem;
+  .Task__header {
+    padding: 1rem;
+    .Task_name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+    .option {
+      position: relative;
+      .option-icon {
+        cursor: pointer;
+      }
+      .modal_box {
+        display: block;
+        position: absolute;
+        left: -80px;
+        // top: 25px;
+        z-index: 40;
+        margin-top: 15px;
+        padding: 15px 7px;
+        width: 150px;
+        background-color: #fff;
+        div {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          width: 100%;
+          &:hover {
+            background-color: #f4f6fe;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .Tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+
+    div {
+      cursor: pointer;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5em;
+      }
+    }
+  }
+}
+
+.task__modal--delete{
+  background: #FFFFFF !important;
+width: 100%;
+padding:2rem;
+// min-height: 20vh;
+
+}
+.task__box{
+  display:flex;
+  justify-content:center;
+}
+.btn__flex{
+  display:flex;
+}
+.btn__revert{
+margin-right: 3rem;
+cursor: pointer;
+}
+.btn__cancel{
+background:red !important;
+cursor: pointer;
+}
+.task__title{
+  text-align: center;
+}
+.text__desc{
+  text-align: center;
+}

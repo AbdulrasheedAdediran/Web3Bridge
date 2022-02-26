@@ -1,0 +1,69 @@
+.project__container {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+.project__container form {
+  background-color: #fff;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.project__container form .attr {
+  padding: 1rem;
+}
+
+.project__container form .attr label {
+  color: black;
+}
+
+.project__container form .attr input {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.project__container form .attr textarea {
+  width: 100%;
+  height: 10rem;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0.7rem;
+}
+
+.project__container form .attr select {
+  width: 100%;
+  padding: 0.9rem;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.project__container form .attr .deliver {
+  background-color: #f4f6fe;
+  padding: 1rem;
+}
+
+.project__container form .attr .deliver .deliver_section {
+  padding: 0.5rem;
+}
+
+.project__container form .attr .deliver .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project__container form .attr .deliver .flex .priority {
+  text-align: center;
+}
+
+.project__container form .attr .deliver .flex .priority button {
+  background-color: #ff6b6b;
+}
+/*# sourceMappingURL=Projects.css.map */

@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-container {
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.card-container:hover {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+.card-container h2 {
+  margin-bottom: 0.75rem;
+}
+
+.card-container .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.75rem;
+}
+
+.card-container .days p {
+  color: red;
+}
+/*# sourceMappingURL=Cards.css.map */

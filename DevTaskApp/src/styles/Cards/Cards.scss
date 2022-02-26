@@ -1,0 +1,28 @@
+@import "../../styles/variables/Variables.scss";
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-container {
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  &:hover {
+    filter: grayscale(70%);
+  }
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+    p {
+      color: red;
+    }
+  }
+}

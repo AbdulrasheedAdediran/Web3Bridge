@@ -1,0 +1,31 @@
+@import "../../styles/variables/Variables.scss";
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  h1 {
+    width: 15rem;
+    height: 15rem;
+    background-color: $btn-primary-color;
+    margin: 1.5rem;
+    border-radius: 0.7rem;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+  .h1-second {
+    background-color: $font-color;
+  }
+}

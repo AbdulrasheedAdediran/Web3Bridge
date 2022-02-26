@@ -1,0 +1,15 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.main {
+  width: calc(100% - 20vw);
+  left: 20vw;
+  position: relative;
+  background-color: #f4f6fe;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=Layouts.css.map */

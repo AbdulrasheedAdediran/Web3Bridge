@@ -1,0 +1,34 @@
+nav {
+  height: 100vh;
+  width: 20vw;
+  min-width: 20vw;
+  background-color: #11468f;
+  position: fixed;
+}
+
+nav ul {
+  color: #ffffff;
+  padding: 5rem 1.5rem;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 1.3rem;
+  font-size: 21.65px;
+}
+
+nav ul li .dash-icon {
+  padding-right: 0.4em;
+}
+
+.path {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.active {
+  color: #ff6b6b;
+}
+/*# sourceMappingURL=Side.css.map */

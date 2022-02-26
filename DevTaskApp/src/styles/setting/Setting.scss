@@ -1,0 +1,20 @@
+@import "../../styles/variables/Variables.scss";
+
+.flex_setting {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 80px;
+  padding: 2em;
+  .Setting_card {
+    border: 3px dashed #000000;
+    border-radius: 18.4302px;
+    cursor: pointer;
+  }
+  .single_setting {
+    padding: 2rem;
+    width: 280px;
+    text-align: center;
+    margin: auto;
+  }
+}

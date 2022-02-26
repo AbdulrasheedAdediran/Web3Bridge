@@ -1,0 +1,203 @@
+.table {
+  padding: 2rem;
+}
+
+.admin {
+  margin-bottom: 2rem;
+}
+
+.task__status {
+  color: #116530;
+  font-weight: 500;
+}
+
+.task__danger {
+  color: #DA1212;
+}
+
+.task__priority {
+  color: #969696;
+}
+
+.task__deadline {
+  color: #DA1212;
+}
+
+.user__lr {
+  font-size: 1.85rem;
+  color: #6a6868;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.task__btn {
+  width: 60% !important;
+  cursor: pointer !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.35rem;
+  border-radius: 10px;
+}
+
+.task__modal--details {
+  color: #000;
+  background-color: #11468F;
+  opacity: .6;
+}
+
+.form_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: blue;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.item__1 {
+  width: 100%;
+  padding: 1rem;
+}
+
+.item__2 {
+  width: 30%;
+  margin-right: 2rem;
+}
+
+.Task__container {
+  padding: 0.3rem 3rem;
+}
+
+.Task__container .Task__header {
+  padding: 1rem;
+}
+
+.Task__container .Task__header .Task_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.Task__container .Task__header .option {
+  position: relative;
+}
+
+.Task__container .Task__header .option .option-icon {
+  cursor: pointer;
+}
+
+.Task__container .Task__header .option .modal_box {
+  display: block;
+  position: absolute;
+  left: -80px;
+  z-index: 40;
+  margin-top: 15px;
+  padding: 15px 7px;
+  width: 150px;
+  background-color: #fff;
+}
+
+.Task__container .Task__header .option .modal_box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.Task__container .Task__header .option .modal_box div:hover {
+  background-color: #f4f6fe;
+  cursor: pointer;
+}
+
+.Task__container .Tasks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Task__container .Tasks div {
+  cursor: pointer;
+}
+
+.Task__container .Tasks div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5em;
+}
+
+.task__modal--delete {
+  background: #FFFFFF !important;
+  width: 100%;
+  padding: 2rem;
+}
+
+.task__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn__revert {
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.btn__cancel {
+  background: red !important;
+  cursor: pointer;
+}
+
+.task__title {
+  text-align: center;
+}
+
+.text__desc {
+  text-align: center;
+}
+/*# sourceMappingURL=Task.css.map */

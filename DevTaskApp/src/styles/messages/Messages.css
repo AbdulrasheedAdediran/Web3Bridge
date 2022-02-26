@@ -1,0 +1,64 @@
+.messages:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.messages__wrapper {
+  padding: 2rem;
+}
+
+.message__card {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.success {
+  color: #f9f9f9;
+  background: #116530;
+}
+
+.flex__timestamp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex__timestamp > p {
+  color: #FF6B6B;
+  font-weight: 500;
+}
+
+.danger {
+  background: #FF6B6B;
+  color: #fff;
+}
+
+.message__con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.message__desc {
+  color: #6A6868;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.message__status {
+  max-width: 100%;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.message__status .message__card {
+  padding: 1rem;
+}
+/*# sourceMappingURL=Messages.css.map */

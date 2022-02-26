@@ -1,0 +1,13 @@
+@import "../variables/Variables.scss";
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+.main {
+  width: calc(100% - 20vw);
+  left: 20vw;
+  position: relative;
+  background-color: $nav-bg;
+  min-height:100vh;
+}

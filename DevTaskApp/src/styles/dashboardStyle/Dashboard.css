@@ -1,0 +1,59 @@
+.container {
+  height: 100%;
+}
+
+.container .flex-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 5rem;
+}
+
+.container .flex-content .avatar-container .avatar {
+  width: 60%;
+}
+
+.container .flex-content .icons {
+  position: relative;
+}
+
+.container .flex-content .icons .bell-icon {
+  outline: olivedrab;
+}
+
+.container .flex-content .icons .circle-icon {
+  position: absolute;
+  font-size: 10px;
+  left: 12px;
+  color: red;
+}
+
+.container .cards-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 0 4rem;
+}
+
+.user__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user__intro {
+  font-size: 1.85rem;
+  color: #6a6868;
+  font-weight: 600;
+}
+/*# sourceMappingURL=Dashboard.css.map */

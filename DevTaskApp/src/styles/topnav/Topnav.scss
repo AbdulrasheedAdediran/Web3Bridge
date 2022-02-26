@@ -1,0 +1,24 @@
+@import "../variables/Variables.scss";
+
+.top-nav {
+  height: 10vh;
+  // width: calc(100vw - 20vw);
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4.5rem;
+  background-color: $nav-bg;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  .logo img {
+    width: 60%;
+  }
+
+  .log-out {
+    color: $font-color;
+  }
+}
