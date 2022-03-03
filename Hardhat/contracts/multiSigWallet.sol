@@ -3,9 +3,9 @@
 pragma solidity ^0.8.0;
 
 // Collection of signatories 
-// At least 75% of signatories must agree for a trasnfer to succeed
-// Only approved signatories can initiate and apporve a transactions
-// 
+// At least 75% of signatories must agree for a transfer to succeed
+// Only approved signatories can initiate and apporve a transaction
+
 contract MultisigWallet{
 address[] owners;
 mapping(address => bool) signatories;
@@ -30,12 +30,12 @@ for(uint i = 0; i < _owners.length; i++){
 
 uint txnId = 1;
 mapping(uint => Transaction) transactions;
-modifier onlyOwner() {
+modifier onlyOwners() {
 require(signatories[msg.sender] == true, "You do not have access");
 _;
 }
 
-function initiateTransaction(uint _amount, address _addressTo) public onlyOwner{
+function initiateTransaction(uint _amount, address _addressTo) public onlyOwners{
     Transaction storage txn = transactions[txnId];
     txn.amount = _amount;
     txn.addressTo = _addressTo;
@@ -43,4 +43,10 @@ function initiateTransaction(uint _amount, address _addressTo) public onlyOwner{
     txnId++;
 }
 
+function approveTransaction() public onlyOwners {
+    Transaction storage txn = transactions[txnId];
+    require(txn.status == false, "You have already approved this transaction");
+    txn.approvalCount++;
+    txn.status = true;
+}
 } // Contract closiing brace

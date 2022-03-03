@@ -9,7 +9,7 @@ async function main() {
         "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
         "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65"
 
-    ], 5);
+    ], 3);
 
     await multisigwallet.deployed();
 
