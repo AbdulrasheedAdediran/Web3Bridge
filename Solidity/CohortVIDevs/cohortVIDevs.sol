@@ -59,6 +59,7 @@ contract W3BDevs{
     function getAllCohorts() view public returns(CohortWithoutMapping[] memory allCohorts){
         allCohorts = new CohortWithoutMapping[](index);
         for(uint i = 0; i < index; i++){
+            Cohort storage c = CohortId[index[i]];
             allCohorts[i].name = CohortId[i+1].name;
             allCohorts[i].devs = CohortId[i+1].devs;
         }
