@@ -18,7 +18,7 @@ struct Transaction{
     address addressTo;
 }
 
- constructor (address[] memory _owners, uint _minApprovalRequired){
+constructor (address[] memory _owners, uint _minApprovalRequired){
 owners = _owners;
 minApprovalRequired = _minApprovalRequired;
 
@@ -40,13 +40,23 @@ function initiateTransaction(uint _amount, address _addressTo) public onlyOwners
     txn.amount = _amount;
     txn.addressTo = _addressTo;
     txn.initiatedBy = msg.sender;
+    txn.approvalCount++;
     txnId++;
 }
 
-function approveTransaction() public onlyOwners {
+function approveTransaction(address _owner) public onlyOwners {
     Transaction storage txn = transactions[txnId];
-    require(txn.status == false, "You have already approved this transaction");
+    require(signatories[_owner] == false, "You have already approved this transaction");
+    for(uint i = 0; i < owners.length; i++){
+    address _owner = owners[i];
+    }
     txn.approvalCount++;
-    txn.status = true;
+    signatories[_owner] = true;
 }
+
+function approvalCount(uint _txnId) public onlyOwners returns(uint approvals){
+    txnId = _txnId;
+    Transaction storage txn = transactions[_txnId];
+    approvals = txn.approvalCount;
+} 
 } // Contract closiing brace
