@@ -31,5 +31,6 @@ contract PriceConsumerV3 {
         ) = priceFeed.latestRoundData();
         uint decimal = priceFeed.decimals();
         return (price, decimal);
+        
     }
 }
